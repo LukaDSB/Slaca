@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+#menuLateral{
+    // position: ;
+    display: flex;
+    flex-direction: column;
+    border-right: solid;
+    height: 100%;
+    width: 10%;
+}
+
+#nome{
+    color: white;
+    background-color: orange;
+
+}
+
+#selecionado{
+    background-color: #FDF1EB;
+}
+
+#header{
+    background-color: #FDF1EB;
+    
+    width: 100%;
+}
+
+#header ul{
+    display: flex;
+    flex-direction: row;
+}
+
+#tituloEImagem{
+    max-width: 30%;
+    height: 10%;
+}
+
+#tituloEImagem h2{
+    color: #ED7839;
+}
+
+#painelDetalhes header{
+    background-color: #FDF1EB;
+}
+
+#conteudoInterno1{
+    display: flex;
+    flex-direction: row;
+}
+
+#descricao{
+    display: flex;
+}
