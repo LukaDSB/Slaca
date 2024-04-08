@@ -3,5 +3,7 @@
 </header>
 
 <div id="painel">
-    <p>{{loremIpsum}}</p>
+    <p>{{loremIpsum}}
+        <span *ngIf="!expandido" onclick="expandir()">Exibir mais</span>
+    </p>
 </div>

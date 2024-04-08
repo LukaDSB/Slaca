@@ -7,11 +7,13 @@ header{
     height: 7%; 
 }
 
-#painel{
+#painel {
     border: 3px solid #FDF1EB;
     margin: 0;
-    padding: 0;
-    max-height: 60vh;
-    max-height: 30vh;
+    padding: 15px;
+    max-height: 29vh;
     max-width: 97%;
+    margin-bottom: 10%;
+    text-align: justify;
+    overflow: auto;
 }
