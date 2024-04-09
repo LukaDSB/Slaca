@@ -1,3 +1,6 @@
+<head>
+    <script src="https://kit.fontawesome.com/3a3a2172d3.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <div id="menuLateral">
         <div id="nome">
@@ -59,7 +62,7 @@
                 </button>  
             </div>
                 
-            <p id="format">COMO CITAR ESSE TRABALHO?</p>
+            <p id="format" class="mt-2">COMO CITAR ESSE TRABALHO?</p>
 
             <app-painel-detalhes></app-painel-detalhes>
         </div>
@@ -74,35 +77,47 @@
         </div>
     
         
-        <header id="discussoesContainerHeader">
+        <header id="discussoesContainerHeader" class="mt-5">
             <h2>Discussões</h2>
         </header>
         <div id="discussoesContainer">
+
             <div id="discussoesCardTopico">
                 <h2>Assunto da pergunta aparece aqui</h2>
                 <h3>Carlos Henrique Santos</h3>
+
                 <div id="discussoesCardTextoInterno">
-                    <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...Comecinho da pergunta aparece aqui resente relato inscreve-se nComecinho da pergunta aparece aqui resente relato inscreve-se n</p>
+                    <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                 </div>
+
                 <div id="discussoesCardFooter">
-                    <img>
-                    <img>
-                    <p></p>
-                    <p></p>
+                    <fa-icon id="faIcon" [icon]="verticalElipsis"></fa-icon>
+                    <!-- <fa-icon id="faIcon" [icon]="heart" ></fa-icon> -->
+                    <img src="assets/images/favoritar.png">
+                    <p>1 like</p>
+                    <p>1 resposta</p>
                 </div>
             </div>
 
             <div id="discussoesCardTopico">
                 <h2>Assunto da pergunta aparece aqui</h2>
                 <h3>Carlos Henrique Santos</h3>
-                <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+
+                <div id="discussoesCardTextoInterno">
+                    <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+                </div>
+
                 <div id="discussoesCardFooter">
-                    <img>
-                    <img>
-                    <p></p>
-                    <p></p>
+                    <fa-icon id="faIcon" [icon]="verticalElipsis"></fa-icon>
+                    <!-- <fa-icon id="faIcon" [icon]="heart" ></fa-icon> -->
+                    <img src="assets/images/favoritar.png">
+                    <p>1 like</p>
+                    <p>1 resposta</p>
                 </div>
             </div>
+            
+            <app-respostas-component></app-respostas-component>
+            
         </div>
         
         <div class="mt-5">

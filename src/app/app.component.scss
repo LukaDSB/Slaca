@@ -36,10 +36,6 @@ body{
 
 #listaDeBotoes{
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
 }
 
 #listaDeBotoes p{
@@ -164,6 +160,12 @@ body{
   font-size: 15px;
 }
 
+.list-group li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
 .active{
   color: #725C5C;
   background-color: #FDF1EB;
@@ -204,13 +206,13 @@ body{
   width: 97%;
   height: 7%; 
   padding: 10px;
-  border-radius: 4px 4px 0px;
+  border-radius: 4px 4px 0px 0px;
 }
 
 #discussoesCardTopico{
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px;
   border-radius: 4px;
@@ -234,10 +236,35 @@ body{
   margin-top: 1vh;
 }
 
-#discussoesCardTextoInterno{
-  overflow: hidden; /* Oculta o texto que ultrapassar o limite */
-  text-overflow: ellipsis; /* Adiciona reticências (...) no final do texto que ultrapassar o limite */
-  white-space: nowrap; /* Impede que o texto quebre para uma nova linha */
-  max-height: calc(1.2em * 3); /* Define a altura máxima em função do número de linhas desejadas */
-  line-height: 1.2em;
+#discussoesCardTextoInterno {
+  margin-bottom: 1vh;
+  max-height: 7vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+}
+#favoritar{
+  height: auto;
+  width: 2vw;
+}
+
+#discussoesCardFooter {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#discussoesCardFooter img{
+  height: auto;
+  width: 2vw;
+  margin-right: 1vw;
+}
+
+#faIcon{
+  margin-right: 1vw;
+  padding: 0;
+  color: #ED7839;
+  width: 20px;
 }
