@@ -11,18 +11,18 @@ export class PainelDetalhesComponent implements OnInit {
   detalhes: Detalhes;
 
   autores: string[] = [
-    'Galileo Galilei',
-    'Berta Lange de Morretes',
-    'Isaac Newton',
-    'Cesar Lattes',
-    'Stephen Hawking'
+    'Galileo Galilei¹',
+    'Berta Lange de Morretes²',
+    'Isaac Newton³',
+    'Cesar Lattes⁴',
+    'Stephen Hawking⁵'
   ];
 
   universidades: string[] = [
-    'Universidade Estadual de Campinas',
-    'Universidade de São Paulo',
-    'Instituto Nacional de Pesquisas Espaciais',
-    'Universidade Federal do Rio de Janeiro'
+    '¹Universidade Estadual de Campinas',
+    '²Universidade de São Paulo',
+    '³Instituto Nacional de Pesquisas Espaciais',
+    '⁴Universidade Federal do Rio de Janeiro'
   ];
 
   constructor() {

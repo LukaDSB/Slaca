@@ -3,6 +3,8 @@
   padding: 0;
   width: 100%;
   height: 100%;
+  color: #725C5C;
+  font-family: Roboto,sans-serif;
 }
 
 h2{
@@ -64,6 +66,10 @@ body{
   background: linear-gradient(0deg, rgba(238,122,58,1) 41%, rgba(238,176,69,1) 100%);
 }
 
+#nome h2{
+  color: white;
+}
+
 #selecionado{
   background-color: #FDF1EB;
 }
@@ -102,6 +108,7 @@ body{
 
 #DirText{
   text-align: end;
+  font-size: 14px;
 }
 
 #logoProfileImg{
@@ -111,13 +118,13 @@ body{
 }
 
 #tituloEImagem{
-  max-width: 48vw;
+  max-width: 52vw;
 }
 
 #tituloEImagem h2{
   color: #ED7839;
   margin-bottom: 3vh;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #painelDetalhes header{
@@ -134,12 +141,18 @@ body{
   flex-direction: column;
   width: 35%;
   margin-right: 3%;
+  margin-left: 3%;
   text-align: end;
   color: #ED7839;
 }
 
 #headerEsq{
   width: 200vw;
+  font-size: 14px;
+}
+
+#headerEsq h2{
+  font-size: 22px;
 }
 
 .list-group-item{
@@ -148,6 +161,7 @@ body{
   justify-content: flex-start;
   position: relative;
   border: none;
+  font-size: 15px;
 }
 
 .active{
@@ -160,7 +174,70 @@ body{
   border: none;
 }
 
-#painelResumo{
+#conteudoInferior{
   margin-left: 18%;
   max-width: 82%;
+}
+
+#format{
+  font-size: 14px;
+  color: #ED7839;
+}
+
+#discussoesContainer{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 97%;
+  height: 7%; 
+  padding: 10px 20px;
+  border: 2px solid #E7E7E7;
+  border-radius: 0px 0px 4px 4px;
+}
+
+#discussoesContainerHeader{
+  background-color: #FDF1EB;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 97%;
+  height: 7%; 
+  padding: 10px;
+  border-radius: 4px 4px 0px;
+}
+
+#discussoesCardTopico{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  border: 1px;
+  border-radius: 4px;
+  box-shadow: 2px 1px 13px 1px #E7E7E7;
+}
+
+#discussoesCardTopico h2{
+  color: #ED7839;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#discussoesCardTopico h3{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#discussoesCardTopico p{
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 1vh;
+}
+
+#discussoesCardTextoInterno{
+  overflow: hidden; /* Oculta o texto que ultrapassar o limite */
+  text-overflow: ellipsis; /* Adiciona reticências (...) no final do texto que ultrapassar o limite */
+  white-space: nowrap; /* Impede que o texto quebre para uma nova linha */
+  max-height: calc(1.2em * 3); /* Define a altura máxima em função do número de linhas desejadas */
+  line-height: 1.2em;
 }

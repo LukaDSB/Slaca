@@ -5,15 +5,21 @@ header{
     align-items: center;
     width: 97%;
     height: 7%; 
+    padding: 10px 15px 0px;
+    border-radius: 4px 4px;
 }
 
 #painel {
     border: 3px solid #FDF1EB;
     margin: 0;
     padding: 15px;
-    max-height: 29vh;
-    max-width: 97%;
     margin-bottom: 10%;
     text-align: justify;
-    overflow: auto;
+    max-width: 97%;
+    border-radius: 0px 0px 4px 4px;
+}
+
+#verMais{
+    color: #ED7839;
+    font-weight: bold;
 }

@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TelaBaseComponent } from './tela-base/tela-base.component';
 import { PainelDetalhesComponent } from './painel-detalhes/painel-detalhes.component';
 import { ResumoComponent } from './resumo/resumo.component';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TelaBaseComponent,
     PainelDetalhesComponent,
-    ResumoComponent
+    ResumoComponent,
+    FooterComponentComponent
   ],
   imports: [
     BrowserModule,

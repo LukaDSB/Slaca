@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     max-height: 60vh;
-    height: 55vh;
+    height: 58vh;
     overflow-y: scroll;
 }
 
@@ -14,18 +14,21 @@ header{
     align-items: center;
     width: 100%;
     height: 7%;
-    padding-left: 1vw;   
+    padding-left: 1vw;
+    padding-top: 10px;   
     margin-top: 7%; 
 }
 
 h2{
     color: #4E4E4E;
     font-size: 25px;
+    font-weight: 500;
 }
 
 p{
     margin: 0;
     padding: 0;
+    color: #5C5C5C;
 }
 
 #conteudoInterno{
@@ -69,5 +72,5 @@ background-color: #BFBFBF;
 }
 
 #universidades{
-    color: black;
+    color: lightgray;
 }
