@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faEllipsisV, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCheckDouble, faEllipsisV, faGlobe, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,28 @@ import { faEllipsisV, faHeart } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'DevChuva';
+  
   verticalElipsis = faEllipsisV;
   heart = faHeart;
+  globo = faGlobe;
+  mais = faPlus;
+  doubleCheckIcon = faCheckDouble;
+
+  exibir:boolean = false;
+  criandoNovoTopico:boolean = false;
+  carregandoTopico:boolean = false;
+
+  exibirRespostas(){
+    this.exibir = !this.exibir;
+  }
+
+  criarTopico(){
+    this.carregandoTopico == true? this.carregandoTopico = !this.carregandoTopico : null;
+    this.criandoNovoTopico = !this.criandoNovoTopico;
+  }
+
+  enviarTopico(){
+    this.carregandoTopico = true;
+    this.criandoNovoTopico = !this.criandoNovoTopico;
+  }
 }

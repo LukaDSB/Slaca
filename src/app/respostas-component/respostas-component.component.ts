@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { faCheckDouble } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-respostas-component',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./respostas-component.component.scss']
 })
 export class RespostasComponentComponent implements OnInit {
+
+  doubleCheckIcon = faCheckDouble;
+
+  @Input() tag?: string;
+  @Input() nome?: string;
 
   constructor() { }
 
