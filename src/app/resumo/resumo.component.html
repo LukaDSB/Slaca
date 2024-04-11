@@ -1,8 +1,0 @@
-<header (click)="clickExpandir()">
-    <h2>Resumo</h2>
-</header>
-
-<div id="painel" (click)="clickExpandir()">
-    <p>{{ loremIpsum1 }}<span *ngIf="resto"> ... <span id="verMais" class="btn-show-more">ver mais</span></span></p>
-    <p id="resto" [hidden]="resto">{{ loremIpsum2 }}</p>
-</div>

@@ -46,21 +46,21 @@
         <div id="tituloEImagem">
             <h2>
                 Análise sensorial de preparações funcionais desenvolvidas para
-                    escolares entre 09 e 15 anos, do município de Campinas/SP 
+                    escolares entre 09 e 15 anos, do município de Campinas/SP
             </h2>
             <img src="assets/images/videoApresentacao.png">
         </div>
         <div id="painelLateral">
             <div id="listaDeBotoes">
                 <button type="button" class="btn btn-primary" id="botaoDownload">
-                    <img id="downloadIcon" src="assets/images/downloadIcon.png"> Download
+                    <img src="assets/images/downloadIcon.png"> Download
                 </button>
                 <button type="button" class="btn btn-primary" id="botaoFavoritos">
                     <img src="assets/images/favIcon.png">
                 </button>
 
                 <button type="button" class="btn btn-primary" id="botaoDoi">
-                    <img id="doiIcon" src="assets/images/doiIcon.png">
+                    <img src="assets/images/doiIcon.png">
                 </button>  
             </div>
             <p id="format" class="mt-2">COMO CITAR ESSE TRABALHO?</p>
@@ -74,7 +74,7 @@
             </header>
             <div id="painel" (click)="clickExpandir()">
                 <p id="limitar">{{ loremIpsum3 }}</p>
-                <p id="resto" [hidden]="resto">{{ loremIpsum3 }}</p>
+                <p [hidden]="resto">{{ loremIpsum3 }}</p>
                 <div id="verMaisVersao2">
                     <p id="laranja" *ngIf="resto" (click)="clickExpandir()" class="btn-show-more">ver mais</p>
                 </div>
@@ -96,8 +96,25 @@
                 </div>
                 <button type="button" class="btn-create-topic" id="botaoCriarTopico" (click)="criarTopico()">
                     <fa-icon id="iconeMais" [icon]="mais"></fa-icon>
-                    Criar tópico
+                    criar tópico
                 </button>
+            </div>
+
+            <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
+                <form>
+                    <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+                    <div class="form-group">
+                        <label for="Assunto">Assunto</label>
+                        <input name="Assunto" class="form-control p-3 subject" id="Assunto" placeholder="Defina um tópico sucinto para notificar os autores...">
+                        <label for="conteudoTopico" class="mt-3">Conteúdo</label>
+                        <input type="text" class="form-control p-3" id="conteudoTopico" placeholder="Defina um tópico sucinto para notificar os autores...">
+                        <div id="formGroupFooter">
+                            <button type="submit" id="botaoEnviar" class="justify-content-center w-15" (click)="enviarTopico()">
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <div *ngIf="carregandoTopico" id="criarNovoTopicoDiv">
@@ -109,21 +126,7 @@
                 </button>
             </div>
 
-            <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
-                <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-                <div class="form-group">
-                    <label for="assuntoTopico">Assunto</label>
-                    <input type="text" class="form-control p-3" id="assuntoTopico" placeholder="Defina um tópico sucinto para notificar os autores...">
-
-                    <label for="conteudoTopico" class="mt-3">Conteúdo</label>
-                    <input type="text" class="form-control p-3 " id="conteudoTopico">
-                    <div id="formGroupFooter">
-                        <button type="button" id="botaoEnviar" class="justify-content-center w-15" (click)="enviarTopico()">
-                            Enviar
-                        </button>
-                    </div>
-                </div>
-            </div>
+            
             <div id="glass">
                 <div id="aguardandoFeedback" *ngIf="carregandoTopico">
                     <fa-icon [icon]="doubleCheckIcon"></fa-icon>
@@ -135,12 +138,12 @@
                         <h2>Assunto da pergunta aparece aqui</h2>
                         <h3>Carlos Henrique Santos</h3>
                         
-                        <div id="discussoesCardTextoInterno">
+                        <div class="discussoesCardTextoInterno">
                             <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                         </div>
                         
-                        <div id="discussoesCardFooter">
-                            <fa-icon id="faIcon" [icon]="verticalElipsis"></fa-icon>
+                        <div class="discussoesCardFooter">
+                            <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
                             <img src="assets/images/favoritar.png">
                             <p>1 like</p>
                             <p>1 resposta</p>
@@ -152,11 +155,11 @@
                 <div class="p-3">
                     <h2>Assunto da pergunta aparece aqui</h2>
                     <h3 class="mt-2">Carlos Henrique Santos</h3>
-                    <div id="discussoesCardTextoInterno">
+                    <div class="discussoesCardTextoInterno">
                         <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                     </div>
-                    <div id="discussoesCardFooter">
-                        <fa-icon id="faIcon" [icon]="verticalElipsis"></fa-icon>
+                    <div class="discussoesCardFooter">
+                        <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
                         <img src="assets/images/favoritar.png">
                         <p>1 like</p>
                         <p>1 resposta</p>
@@ -168,12 +171,12 @@
                     <h2 class="ops-topic-subject">Assunto da pergunta aparece aqui</h2>
                     <h3 class="mt-2">Carlos Henrique Santos</h3>
                     
-                    <div id="discussoesCardTextoInterno">
+                    <div class="discussoesCardTextoInterno">
                         <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                     </div>
                     
-                    <div id="discussoesCardFooter">
-                        <fa-icon id="faIcon" [icon]="verticalElipsis"></fa-icon>
+                    <div class="discussoesCardFooter">
+                        <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
                         <img src="assets/images/favoritar.png">
                         <p>1 like</p>
                         <p>1 resposta</p>

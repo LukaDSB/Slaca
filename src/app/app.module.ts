@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TelaBaseComponent } from './tela-base/tela-base.component';
 import { PainelDetalhesComponent } from './painel-detalhes/painel-detalhes.component';
-import { ResumoComponent } from './resumo/resumo.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RespostasComponentComponent } from './respostas-component/respostas-component.component';
@@ -12,9 +10,7 @@ import { RespostasComponentComponent } from './respostas-component/respostas-com
 @NgModule({
   declarations: [
     AppComponent,
-    TelaBaseComponent,
     PainelDetalhesComponent,
-    ResumoComponent,
     FooterComponentComponent,
     RespostasComponentComponent
   ],
@@ -23,7 +19,7 @@ import { RespostasComponentComponent } from './respostas-component/respostas-com
     FontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, TelaBaseComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { 
   
