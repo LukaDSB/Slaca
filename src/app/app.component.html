@@ -69,13 +69,22 @@
     </div>
     <div id="conteudoInferior">
         <div class="mt-5">
-            <app-resumo></app-resumo>
+            <header (click)="clickExpandir()">
+                <h2>Resumo</h2>
+            </header>
+            <div id="painel" (click)="clickExpandir()">
+                <p id="limitar">{{ loremIpsum3 }}</p>
+                <p id="resto" [hidden]="resto">{{ loremIpsum3 }}</p>
+                <div id="verMaisVersao2">
+                    <p id="laranja" *ngIf="resto" (click)="clickExpandir()" class="btn-show-more">ver mais</p>
+                </div>
+            </div>
         </div>
         <header id="discussoesContainerHeader" class="mt-5">
             <h2>Discussões</h2>
         </header>
         <div id="discussoesContainer">
-            <div *ngIf="!criandoNovoTopico" id="criarTopicoDiv">
+            <div *ngIf="!criandoNovoTopico && !carregandoTopico" id="criarTopicoDiv">
                 <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
                 <div id="criarTopicoIcones">
                     <img src="assets/images/criarTopicoIcone1.png">
@@ -85,11 +94,21 @@
                 <div id="criarTopicoP" class="mb-3">
                     <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
                 </div>
-                <button type="button" id="botaoCriarTopico" (click)="criarTopico()">
+                <button type="button" class="btn-create-topic" id="botaoCriarTopico" (click)="criarTopico()">
                     <fa-icon id="iconeMais" [icon]="mais"></fa-icon>
                     Criar tópico
                 </button>
             </div>
+
+            <div *ngIf="carregandoTopico" id="criarNovoTopicoDiv">
+                <h2>Seu tópico foi enviado com sucesso! :D</h2>
+                <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+                <p><a href="#" class="link">Descubra outros trabalhos!</a></p>
+                <button type="button" id="botaoCriarNovoTopico" (click)="criarTopico()">
+                    criar novo tópico
+                </button>
+            </div>
+
             <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
                 <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
                 <div class="form-group">
@@ -132,7 +151,7 @@
             <div id="discussoesCardTopico">
                 <div class="p-3">
                     <h2>Assunto da pergunta aparece aqui</h2>
-                    <h3>Carlos Henrique Santos</h3>
+                    <h3 class="mt-2">Carlos Henrique Santos</h3>
                     <div id="discussoesCardTextoInterno">
                         <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                     </div>
@@ -144,10 +163,10 @@
                     </div>
                 </div>
             </div>
-            <div (click)="exibirRespostas()" id="discussoesCardTopico">
+            <div class="answered-topic" (click)="exibirRespostas()" id="discussoesCardTopico">
                 <div class="p-3">
-                    <h2>Assunto da pergunta aparece aqui</h2>
-                    <h3>Carlos Henrique Santos</h3>
+                    <h2 class="ops-topic-subject">Assunto da pergunta aparece aqui</h2>
+                    <h3 class="mt-2">Carlos Henrique Santos</h3>
                     
                     <div id="discussoesCardTextoInterno">
                         <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
@@ -160,7 +179,7 @@
                         <p>1 resposta</p>
                     </div>
                 </div>
-                <div *ngIf="exibir" class="mt-2">
+                <div *ngIf="exibir" class="comments-container mt-2">
                     <app-respostas-component [tag]="'Autor'" [nome]="'Adriano da Silva'"></app-respostas-component>
                     <app-respostas-component [nome]="'Carlos Henrique Santos'"></app-respostas-component>
                     <app-respostas-component [tag]="'Coautor'" [nome]="'Carmila Ferreira Andrade'"></app-respostas-component>
