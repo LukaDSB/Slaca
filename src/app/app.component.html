@@ -99,7 +99,6 @@
                     criar tópico
                 </button>
             </div>
-
             <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
                 <form>
                     <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
@@ -116,7 +115,6 @@
                     </div>
                 </form>
             </div>
-
             <div *ngIf="carregandoTopico" id="criarNovoTopicoDiv">
                 <h2>Seu tópico foi enviado com sucesso! :D</h2>
                 <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
@@ -125,8 +123,6 @@
                     criar novo tópico
                 </button>
             </div>
-
-            
             <div id="glass">
                 <div id="aguardandoFeedback" *ngIf="carregandoTopico">
                     <fa-icon [icon]="doubleCheckIcon"></fa-icon>
