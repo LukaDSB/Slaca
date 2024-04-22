@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCheckDouble, faEllipsisV, faGlobe, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,27 +7,18 @@ import { faCheckDouble, faEllipsisV, faGlobe, faHeart, faPlus } from '@fortaweso
 })
 export class AppComponent {
   title = 'DevChuva';
-  
-  verticalElipsis = faEllipsisV;
-  heart = faHeart;
-  globo = faGlobe;
-  mais = faPlus;
-  doubleCheckIcon = faCheckDouble;
-
-  exibir:boolean = false;
+    
+  nome: string = 'alguem12@galoascience.com'
+  exibirRespostas:boolean = false;
   criandoNovoTopico:boolean = false;
   carregandoTopico:boolean = false;
-
-  loremIpsum1: string = this.gerarLoremIpsum(4);
-  loremIpsum2: string = this.gerarLoremIpsum(5);
-  loremIpsum3: string = this.gerarLoremIpsum(10);
-  expandido: boolean = false;
-  resto: boolean = true;
-  alturaPainel = 'auto';
+  
+  texto: string = this.gerarLoremIpsum(20);
+  limite: number = 780;
+  exibirTextoExpandido: boolean = false;
 
   clickExpandir() {
-    this.resto = !this.resto;
-    this.alturaPainel = this.resto ? 'auto' : '0';
+    this.exibirTextoExpandido = !this.exibirTextoExpandido;
   }
   
   gerarLoremIpsum(tamanho: number): string{
@@ -37,8 +27,8 @@ export class AppComponent {
     return texto.repeat(tamanho);
   }
 
-  exibirRespostas(){
-    this.exibir = !this.exibir;
+  exibirRespostasContainer(){
+    this.exibirRespostas = !this.exibirRespostas;
   }
 
   criarTopico(){
